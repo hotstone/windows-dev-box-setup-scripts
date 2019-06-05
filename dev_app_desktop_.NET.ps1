@@ -49,18 +49,17 @@ choco install -y python
 choco install -y 7zip.install
 choco install -y sysinternals
 choco install docker-desktop
-
-#--- Tools ---
+choco install cmder
+choco install awscli
 
 # Visual Studio 2019 Professional 
 # See here for component IDs: https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-professional?vs-2019&view=vs-2019
 choco install visualstudio2019professional --package-parameters "--add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetCoreTools --add Microsoft.VisualStudio.Workload.NetWeb --add Microsoft.VisualStudio.Workload.Node --add Microsoft.VisualStudio.Workload.VisualStudioExtension --includeRecommended --includeOptional --passive --locale en-AU"
 
-Update-SessionEnvironment #refreshing env due to Git install
+# SQL Server
+choco install sql-server-management-studio
 
-#--- UWP Workload and installing Windows Template Studio ---
-choco install -y visualstudio2017-workload-azure
-choco install -y visualstudio2017-workload-manageddesktop
+Update-SessionEnvironment #refreshing env due to Git install
 
 #--- reenabling critial items ---
 Enable-UAC
