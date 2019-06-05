@@ -28,15 +28,11 @@ executeScript "RemoveDefaultApps.ps1";
 executeScript "CommonDevTools.ps1";
 
 #--- Tools ---
-#--- Installing VS and VS Code with Git
-# See this for install args: https://chocolatey.org/packages/VisualStudio2017Community
-# https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-community
-# https://docs.microsoft.com/en-us/visualstudio/install/use-command-line-parameters-to-install-visual-studio#list-of-workload-ids-and-component-ids
-# visualstudio2017community
-# visualstudio2017professional
-# visualstudio2017enterprise
 
-choco install -y visualstudio2017community --package-parameters="'--add Microsoft.VisualStudio.Component.Git'"
+# Visual Studio 2019 Professional 
+# See here for component IDs: https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-professional?vs-2019&view=vs-2019
+choco install visualstudio2019professional --package-parameters "--add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetCoreTools --add Microsoft.VisualStudio.Workload.NetWeb --add Microsoft.VisualStudio.Workload.Node --add Microsoft.VisualStudio.Workload.VisualStudioExtension --includeRecommended --includeOptional --passive --locale en-AU"
+
 Update-SessionEnvironment #refreshing env due to Git install
 
 #--- UWP Workload and installing Windows Template Studio ---
