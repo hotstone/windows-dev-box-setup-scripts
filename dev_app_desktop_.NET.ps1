@@ -45,12 +45,12 @@ executeScript "RemoveDefaultApps.ps1";
 #--- Dev tools --- 
 choco install -y vscode
 choco install -y git --package-parameters="'/GitAndUnixToolsOnPath /WindowsTerminal'"
-choco install -y python
+choco install -y python3
 choco install -y 7zip.install
 choco install -y sysinternals
-choco install docker-desktop
-choco install cmder
-choco install awscli
+choco install -y docker-desktop
+choco install -y cmder
+choco install -y awscli
 
 # Visual Studio 2019 Professional 
 # See here for component IDs: https://docs.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-professional?vs-2019&view=vs-2019
